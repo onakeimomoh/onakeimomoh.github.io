@@ -117,7 +117,7 @@ p, h1, h2, h3, h4, figure { margin-top: 0; }
 .nav-toggle span:not(.sr-only) { display: block; width: 24px; height: 2px; margin: 5px 0; background: var(--cream); }
 
 .hero { padding-top: 72px; overflow: hidden; }
-.hero-grid { display: grid; grid-template-columns: 1.12fr 0.88fr; align-items: center; gap: 72px; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.24fr) minmax(300px, .76fr); align-items: center; gap: 64px; }
 .eyebrow, .section-index { color: var(--gold-400); font-size: 12px; font-weight: 750; letter-spacing: 0.16em; text-transform: uppercase; }
 .eyebrow { display: flex; align-items: center; gap: 10px; }
 .eyebrow span { width: 32px; height: 1px; background: var(--gold-500); }
@@ -155,7 +155,7 @@ h1 em { color: var(--gold-400); font-weight: 500; }
 .availability { display: flex; align-items: center; gap: 10px; margin-top: 22px; color: var(--muted); font-size: 13px; }
 .availability span { width: 8px; aspect-ratio: 1; border-radius: 50%; background: #69c59b; box-shadow: 0 0 0 5px rgba(105,197,155,.1); }
 
-.portrait-card { position: relative; margin: 0; }
+.portrait-card { position: relative; width: min(100%, 420px); margin: 0; justify-self: end; }
 .portrait-card::before {
   content: "";
   position: absolute;
@@ -165,8 +165,8 @@ h1 em { color: var(--gold-400); font-weight: 500; }
   border-radius: 32px;
   transform: rotate(-2deg);
 }
-.portrait-frame { overflow: hidden; height: min(68vh, 640px); min-height: 500px; border: 1px solid var(--line); border-radius: 28px; background: var(--navy-800); box-shadow: var(--shadow); }
-.portrait-frame img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 36%; }
+.portrait-frame { overflow: hidden; aspect-ratio: 4 / 5; border: 1px solid var(--line); border-radius: 28px; background: var(--navy-800); box-shadow: var(--shadow); }
+.portrait-frame img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 42%; transform: scale(1.07); transform-origin: center 42%; }
 .portrait-card figcaption { display: flex; flex-direction: column; gap: 2px; padding: 16px 4px 0; }
 .portrait-card figcaption strong { font-size: 15px; }
 .portrait-card figcaption span { color: var(--muted); font-size: 12px; }
@@ -264,9 +264,8 @@ h1 em { color: var(--gold-400); font-weight: 500; }
 @media (max-width: 1020px) {
   .hero-grid, .split-layout, .toolkit { grid-template-columns: 1fr; }
   .hero-grid { gap: 58px; }
-  .portrait-card { width: min(100%, 620px); }
-  .portrait-frame { height: min(72vw, 560px); min-height: 420px; }
-  .portrait-frame img { object-position: center 36%; }
+  .portrait-card { width: min(78vw, 420px); justify-self: center; }
+  .portrait-frame img { object-position: center 42%; }
   .split-layout { gap: 40px; }
   .capability-grid { grid-template-columns: 1fr 1fr; }
   .toolkit { gap: 28px; }
@@ -291,7 +290,7 @@ h1 em { color: var(--gold-400); font-weight: 500; }
   h1 { font-size: clamp(3rem, 14.5vw, 4.8rem); }
   .hero-intro { font-size: 16px; }
   .availability { align-items: flex-start; }
-  .portrait-frame { height: min(118vw, 620px); min-height: 460px; }
+  .portrait-card { width: min(86vw, 380px); }
   .focus-strip { grid-template-columns: 1fr 1fr; margin-top: 56px; }
   .focus-strip span:nth-child(2) { border-right: 0; }
   .focus-strip span:nth-child(-n+2) { border-bottom: 1px solid var(--line-blue); }
