@@ -12,7 +12,8 @@ https://onakeimomoh.github.io
 - Evidence-led capabilities and working toolkit
 - Four selected SOC and defensive-security case studies
 - Experience and training
-- Public CV and verified UBI portfolio dossier
+- Public CV, verified UBI portfolio dossier and reference letter
+- Google Cybersecurity Professional Certificate
 - Detailed performance record available on request
 - Contact links
 
